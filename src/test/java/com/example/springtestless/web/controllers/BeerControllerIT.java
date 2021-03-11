@@ -19,5 +19,7 @@ public class BeerControllerIT {
         BeerPagedList beerPagedList = testRestTemplate.getForObject("/api/v1/beer",BeerPagedList.class);
 
         assertThat(beerPagedList).hasSize(3);
+
+        System.out.println("Beer Test");
     }
 }

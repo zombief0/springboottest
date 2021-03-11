@@ -34,5 +34,6 @@ public class BeerOrderControllerIT {
     void orderListTest() {
         BeerOrderPagedList beerOrderDtos = testRestTemplate.getForObject("/api/v1/customers/{customerId}/orders",BeerOrderPagedList.class,customer.getId());
         assertThat(beerOrderDtos.getSize()).isGreaterThan(0);
+        System.out.println("Order Tests");
     }
 }
